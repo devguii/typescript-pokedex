@@ -5,7 +5,7 @@ const Logo = require("./../../assets/images/logo.png")
 
 const Filter = require("./../../assets/images/filter.png")
 
-function Header() {
+const Header = () => {
   return (
     <Container>
         <ImgContainer>
@@ -18,7 +18,7 @@ function Header() {
           <Img src={Filter} alt="logo"/>
         </FilterContainer>
     </Container>
-  )
+  ) 
 }
 
 export default Header

@@ -4,8 +4,7 @@ import "../src/styles/globals.css";
 
 function App() {
   return (
-    <Routes />
-    
+      <Routes />
   );
 }
 

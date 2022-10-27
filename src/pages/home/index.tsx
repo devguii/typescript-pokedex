@@ -1,9 +1,12 @@
 import React from 'react'
-import {Header} from "../../components"
+import {Header, SearchBar} from "../../components/"
 
-function Home() {
+const Home = () =>  {
   return (
+  <>
     <Header />
+    <SearchBar /> 
+  </>
   )
 }
 
