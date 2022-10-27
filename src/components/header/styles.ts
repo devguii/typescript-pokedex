@@ -1,19 +1,40 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-height : 10%;
+height : 100%;
 width : 100%;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 background-color: grey;
 align-items: center;
-text-transform: uppercase;
-justify-content: space-between;    
+justify-content: center;
+text-transform: uppercase;   
 padding: 20px;
 `
 export const ImgContainer = styled.div`
 height : 100%;
 width : 10%;
-float : left;
-background-color: red;
+display: flex;
+align-items: center;
+justify-content: center;
+`
+export const TextContainer = styled.div`
+height: 100%;
+width: 70%;
+display: flex;
+`
+export const TextComponent = styled.text`
+font-family: sans-serif;
+font-size: 28px;
+`
+
+export const FilterContainer = styled.div`
+height: 100%;
+width: 20%;
+display: flex;
+align-items: center;
+justify-content: center;
+`
+export const Img = styled.img`
+    transform: scale(1.5);
 `
