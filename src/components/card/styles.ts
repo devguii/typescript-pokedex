@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface IColor {
-  color: string;
+  color: string | undefined;
 }
 
 export const Container = styled.div<IColor>`

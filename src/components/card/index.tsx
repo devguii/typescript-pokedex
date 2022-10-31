@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import typesToColor from "../../utils/typesToColor";
 import {
   Container,
   IdContainer,
@@ -26,7 +27,14 @@ interface IPokemon {
   species: {};
   sprites: { front_default: string };
   stats: [];
-  types: [{}];
+  types: [
+    {
+      type: {
+        name: string;
+        url: string;
+      };
+    }
+  ];
   weight: number;
 }
 
@@ -49,8 +57,8 @@ const Card = ({ data }: ICardProps) => {
   }, []);
 
   return (
-    <Container color="green">
-      <IdContainer color="green">
+    <Container color={typesToColor(pokemon && pokemon.types[0].type.name)}>
+      <IdContainer color={typesToColor(pokemon && pokemon.types[0].type.name)}>
         <text># {pokemon && pokemon.id}</text>
       </IdContainer>
 
@@ -58,7 +66,9 @@ const Card = ({ data }: ICardProps) => {
         <Img src={pokemon && pokemon.sprites.front_default} />
       </ImgContainer>
 
-      <NameContainer color="green">
+      <NameContainer
+        color={typesToColor(pokemon && pokemon.types[0].type.name)}
+      >
         <text>{pokemon && pokemon.name}</text>
       </NameContainer>
     </Container>
