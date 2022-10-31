@@ -31,7 +31,7 @@ export default function typesToColor(type: string | undefined) {
     case "ice":
       return "#99d7d8";
     case "dragon":
-      return "##724ff8";
+      return "#724ff8";
     case "dark":
       return "#6f5647";
     case "fairy":

@@ -8,6 +8,7 @@ import {
   NameContainer,
 } from "./styles";
 
+import { Spinner } from "@chakra-ui/react";
 const Pokemon = require("./../../assets/images/logo.png");
 
 interface IPokemon {
@@ -49,28 +50,43 @@ interface ICardProps {
 
 const Card = ({ data }: ICardProps) => {
   const [pokemon, setPokemon] = useState<IPokemon>();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch(`https://pokeapi.co/api/v2/pokemon/${data.name}`)
       .then((res) => res.json())
       .then((data) => setPokemon(data));
-  }, []);
+    setLoading(false);
+  }, [pokemon]);
 
   return (
     <Container color={typesToColor(pokemon && pokemon.types[0].type.name)}>
-      <IdContainer color={typesToColor(pokemon && pokemon.types[0].type.name)}>
-        <text># {pokemon && pokemon.id}</text>
-      </IdContainer>
-
-      <ImgContainer>
-        <Img src={pokemon && pokemon.sprites.front_default} />
-      </ImgContainer>
-
-      <NameContainer
-        color={typesToColor(pokemon && pokemon.types[0].type.name)}
-      >
-        <text>{pokemon && pokemon.name}</text>
-      </NameContainer>
+      {loading ? (
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="blue.500"
+          size="xl"
+        />
+      ) : (
+        <>
+          <IdContainer
+            color={typesToColor(pokemon && pokemon.types[0].type.name)}
+          >
+            <text># {pokemon && pokemon.id}</text>
+          </IdContainer>
+          <ImgContainer>
+            <Img src={pokemon && pokemon.sprites.front_default} />
+          </ImgContainer>
+          <NameContainer
+            color={typesToColor(pokemon && pokemon.types[0].type.name)}
+          >
+            <text>{pokemon && pokemon.name}</text>
+          </NameContainer>
+        </>
+      )}
     </Container>
   );
 };

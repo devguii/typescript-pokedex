@@ -7,7 +7,7 @@ interface IColor {
 export const Container = styled.div<IColor>`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 38vh;
   border-radius: 15px;
   border: ${(props) => (props.color ? `solid ${props.color}` : "solid black")};
   display: flex;

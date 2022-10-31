@@ -2,22 +2,15 @@ import { useEffect, useState } from "react";
 import { Grid } from "@chakra-ui/react";
 import Card from "../card/index";
 import { Container } from "./styles";
+import { isConstructorDeclaration } from "typescript";
 
-interface IReq {
-  count: number;
-  next: string;
-  previous: string;
-  results: [{ name: string; url: string }];
+interface IList {
+  results: [{ name: string; url: string }] | undefined;
 }
+export const List = ({ results }: IList) => {
+  const [listPokemon, setListPokemon] = useState([]);
 
-export const List = () => {
-  const [pokemon, setPokemon] = useState<IReq>();
-
-  useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/?limit=50`)
-      .then((res) => res.json())
-      .then((data) => setPokemon(data));
-  }, []);
+  useEffect(() => {}, [results]);
 
   return (
     <Container>
@@ -26,10 +19,8 @@ export const List = () => {
         style={{ width: "100%", height: "95%" }}
         gap={15}
       >
-        {pokemon &&
-          pokemon.results.map((item, index) => (
-            <Card data={item} key={index} />
-          ))}
+        {results &&
+          results.map((item, index) => <Card data={item} key={index} />)}
       </Grid>
     </Container>
   );
