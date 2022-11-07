@@ -56,6 +56,7 @@ export const TextComponent = styled.text<IColor>`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   text-transform: capitalize;
+  font-weight: bold;
   color: ${(props) => (props.color ? props.color : "black")};
   text-shadow: 3px 0px 5px #fff, -1px 1px 0px #fff, 1px -1px 5px #fff,
     0px 2px 5px #fff;

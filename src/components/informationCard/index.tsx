@@ -6,6 +6,8 @@ import {
   ImgContainer,
   ImgComponent,
   InformationContainer,
+  TextComponent,
+  ContainerDireita,
 } from "./styles";
 
 interface IInformation {
@@ -16,15 +18,19 @@ const InformationCard = () => {
   const location = useLocation();
   const { pokemon }: IInformation = location.state;
 
-  console.log(pokemon.id);
   return (
     <Container>
       <ImgContainer>
         <ImgComponent
           src={pokemon.sprites.other.home.front_default}
         ></ImgComponent>
+        <TextComponent>
+          #{pokemon && pokemon.id} {pokemon.name}
+        </TextComponent>
       </ImgContainer>
-      <InformationContainer></InformationContainer>
+      <ContainerDireita>
+        <InformationContainer></InformationContainer>
+      </ContainerDireita>
     </Container>
   );
 };
