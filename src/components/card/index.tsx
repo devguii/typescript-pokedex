@@ -9,9 +9,10 @@ import {
 } from "./styles";
 
 import { Spinner } from "@chakra-ui/react";
+import { Link, useRoutes } from "react-router-dom";
 const Pokemon = require("./../../assets/images/logo.png");
 
-interface IPokemon {
+export interface IPokemon {
   abilities: [];
   base_experience: number;
   forms: [];
@@ -26,7 +27,14 @@ interface IPokemon {
   order: number;
   past_types: [];
   species: {};
-  sprites: { front_default: string };
+  sprites: {
+    front_default: string;
+    other: {
+      home: { front_default: string };
+      dream_world: { front_default: string };
+      "official-artwork": { front_default: string };
+    };
+  };
   stats: [];
   types: [
     {
@@ -58,10 +66,13 @@ const Card = ({ data }: ICardProps) => {
       .then((res) => res.json())
       .then((data) => setPokemon(data));
     setLoading(false);
-  }, [pokemon]);
+  }, [data]);
 
   return (
     <Container color={typesToColor(pokemon && pokemon.types[0].type.name)}>
+      <Link to="/information" state={{ pokemon }}>
+        Detalhes
+      </Link>
       {loading ? (
         <Spinner
           thickness="4px"

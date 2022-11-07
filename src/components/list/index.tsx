@@ -10,7 +10,7 @@ interface IList {
 export const List = ({ results }: IList) => {
   const [listPokemon, setListPokemon] = useState([]);
 
-  useEffect(() => {}, [results]);
+  //useEffect(() => {}, [results]);
 
   return (
     <Container>
