@@ -1,7 +1,12 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { IPokemon } from "../card";
-import { Container, ImgContainer, ImgComponent } from "./styles";
+import {
+  Container,
+  ImgContainer,
+  ImgComponent,
+  InformationContainer,
+} from "./styles";
 
 interface IInformation {
   pokemon: IPokemon;
@@ -19,6 +24,7 @@ const InformationCard = () => {
           src={pokemon.sprites.other.home.front_default}
         ></ImgComponent>
       </ImgContainer>
+      <InformationContainer></InformationContainer>
     </Container>
   );
 };

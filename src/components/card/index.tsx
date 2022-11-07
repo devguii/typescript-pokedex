@@ -6,6 +6,7 @@ import {
   Img,
   ImgContainer,
   NameContainer,
+  TextComponent,
 } from "./styles";
 
 import { Spinner } from "@chakra-ui/react";
@@ -89,12 +90,21 @@ const Card = ({ data }: ICardProps) => {
             <text># {pokemon && pokemon.id}</text>
           </IdContainer>
           <ImgContainer>
-            <Img src={pokemon && pokemon.sprites.front_default} />
+            <Img
+              src={
+                pokemon &&
+                pokemon.sprites.other["official-artwork"].front_default
+              }
+            />
           </ImgContainer>
           <NameContainer
             color={typesToColor(pokemon && pokemon.types[0].type.name)}
           >
-            <text>{pokemon && pokemon.name}</text>
+            <TextComponent
+              color={typesToColor(pokemon && pokemon.types[0].type.name)}
+            >
+              {pokemon && pokemon.name}
+            </TextComponent>
           </NameContainer>
         </>
       )}
