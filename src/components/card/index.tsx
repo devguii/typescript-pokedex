@@ -35,6 +35,13 @@ export interface IPokemon {
       dream_world: { front_default: string };
       "official-artwork": { front_default: string };
     };
+    versions: {
+      "generation-vii": {
+        "ultra-sun-ultra-moon": {
+          front_default: string;
+        };
+      };
+    };
   };
   stats: [];
   types: [

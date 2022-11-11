@@ -1,7 +1,4 @@
 import styled from "styled-components";
-interface IColor {
-  color: string | undefined;
-}
 
 export const Container = styled.div`
   width: 100%;
@@ -27,7 +24,7 @@ export const ImgContainer = styled.div`
   justify-content: center;
 `;
 
-export const InformationContainer = styled.div<IColor>`
+export const InformationContainer = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 30px;

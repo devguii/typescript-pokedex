@@ -2,7 +2,11 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Wave from "react-wavify";
 import typesToColor from "../../utils/typesToColor";
+import Caracteristiques from "../caracteristiques";
 import { IPokemon } from "../card";
+import Description from "../description";
+import IconName from "../iconName";
+import Stats from "../stats";
 import {
   Container,
   ImgContainer,
@@ -30,7 +34,7 @@ const InformationCard = () => {
         paused={false}
         options={{
           height: 100,
-          amplitude: 30,
+          amplitude: 40,
           speed: 0.16,
           points: 2,
         }}
@@ -48,7 +52,12 @@ const InformationCard = () => {
         <ContainerDireita>
           <InformationContainer
             color={typesToColor(pokemon && pokemon.types[0].type.name)}
-          ></InformationContainer>
+          >
+            <IconName></IconName>
+            <Description></Description>
+            <Caracteristiques></Caracteristiques>
+            <Stats></Stats>
+          </InformationContainer>
         </ContainerDireita>
       </Container>
     </ContainerPai>
