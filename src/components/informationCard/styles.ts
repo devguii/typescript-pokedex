@@ -1,40 +1,42 @@
 import styled from "styled-components";
+interface IColor {
+  color: string | undefined;
+}
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
+export const ContainerPai = styled.div``;
+
 export const ContainerDireita = styled.div`
   width: 57%;
   height: 90vh;
-  background-color: purple;
   padding: 30px;
 `;
 
 export const ImgContainer = styled.div`
   width: 43%;
   height: 80vh;
-  background-color: yellow;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-export const InformationContainer = styled.div`
+export const InformationContainer = styled.div<IColor>`
   width: 100%;
   height: 100%;
-  background-color: blue;
   border-radius: 30px;
+  border: 1vh solid black;
 `;
 
 export const ImgComponent = styled.img`
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
 `;
 
 export const TextComponent = styled.text`
@@ -42,5 +44,18 @@ export const TextComponent = styled.text`
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 300%;
-  color: #fff;
+  color: black;
+`;
+
+export const SvgComponent = styled.svg`
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800vh;
+`;
+
+export const PathComponent = styled.path`
+  stroke: none;
+  fill: red;
 `;
