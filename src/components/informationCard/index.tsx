@@ -54,7 +54,7 @@ const InformationCard = () => {
             color={typesToColor(pokemon && pokemon.types[0].type.name)}
           >
             <IconName></IconName>
-            <Description></Description>
+            <Description data={pokemon}></Description>
             <Caracteristiques></Caracteristiques>
             <Stats></Stats>
           </InformationContainer>
