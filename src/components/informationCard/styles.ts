@@ -40,7 +40,7 @@ export const ImgComponent = styled.img`
 export const TextComponent = styled.text`
   text-transform: capitalize;
   font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Fira Sans";
   font-size: 4rem;
   color: black;
 `;

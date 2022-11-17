@@ -22,8 +22,8 @@ export const TextContainer = styled.div`
   display: flex;
 `;
 export const TextComponent = styled.text`
-  font-family: sans-serif;
-  font-size: 28px;
+  font-family: "Fira Sans";
+  font-size: 4rem;
 `;
 
 export const FilterContainer = styled.div`

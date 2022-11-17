@@ -5,13 +5,13 @@ interface IColor {
 
 export const Container = styled.div`
   width: 100%;
-  height: 10%;
+  height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 export const ImgContainer = styled.div`
-  width: 10%;
+  width: 15%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -22,7 +22,8 @@ export const ImgComponent = styled.img`
   height: 100%;
 `;
 export const TextComponent = styled.text<IColor>`
+  font-family: "Fira Sans";
   text-transform: uppercase;
-  margin-left: 2vh;
+  font-size: 2.15rem;
   color: ${(props) => (props.color ? props.color : "black")};
 `;

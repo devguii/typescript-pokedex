@@ -5,7 +5,7 @@ interface IColor {
 
 export const Container = styled.div`
   width: 100%;
-  height: 30%;
+  height: 25%;
   background-color: blue;
 `;
 export const Detail = styled.div`
