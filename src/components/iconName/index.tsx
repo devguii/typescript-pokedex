@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { Container, ImgComponent, ImgContainer, TextComponent } from "./styles";
 import { IPokemon } from "../card";
+import typesToColor from "./../../utils/typesToColor";
 
 interface IInformation {
   pokemon: IPokemon;
@@ -13,10 +14,20 @@ const IconName = () => {
 
   return (
     <Container>
+      <TextComponent
+        color={typesToColor(pokemon && pokemon.types[0].type.name)}
+      >
+        #{pokemon.id} - {pokemon.name}
+      </TextComponent>
+
       <ImgContainer>
-        <ImgComponent src={pokemon.sprites.front_default} />
+        <ImgComponent
+          src={
+            pokemon.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"]
+              .front_default
+          }
+        />
       </ImgContainer>
-      <TextComponent>{pokemon.name}</TextComponent>
     </Container>
   );
 };

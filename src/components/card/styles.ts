@@ -9,7 +9,7 @@ export const Container = styled.div<IColor>`
   width: 100%;
   height: 48vh;
   border-radius: 15px;
-  border: ${(props) => (props.color ? `solid ${props.color}` : "solid black")};
+  border: ${(props) => (props.color ? `solid ${props.color}` : "solid white")};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ export const IdContainer = styled.div<IColor>`
   height: 5vh;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  color: ${(props) => (props.color ? props.color : "black")};
+  color: ${(props) => (props.color ? props.color : "white")};
   display: flex;
   align-items: right;
   justify-content: right;
@@ -34,15 +34,16 @@ export const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-width: 0;
 `;
 export const NameContainer = styled.div<IColor>`
   margin: 0;
   width: 100%;
   height: 11vh;
-  border: ${(props) => (props.color ? `solid ${props.color}` : "solid black")};
+  border: ${(props) => (props.color ? `solid ${props.color}` : "solid white")};
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  background-color: ${(props) => (props.color ? props.color : "black")};
+  background-color: ${(props) => (props.color ? props.color : "white")};
   display: flex;
   align-items: center;
   justify-content: center;

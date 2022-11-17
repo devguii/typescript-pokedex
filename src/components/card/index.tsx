@@ -11,7 +11,6 @@ import {
 
 import { Spinner } from "@chakra-ui/react";
 import { Link, useRoutes } from "react-router-dom";
-const Pokemon = require("./../../assets/images/logo.png");
 
 export interface IPokemon {
   abilities: [];

@@ -9,11 +9,13 @@ export const Container = styled.div`
   background-color: blue;
 `;
 export const Detail = styled.div`
-  width: 30%;
-  height: 10%;
+  width: 25%;
+  height: 2vh;
   background-color: greenyellow;
 `;
 
-export const H1Component = styled.h1``;
+export const H1Component = styled.h1`
+  text-transform: uppercase;
+`;
 
 export const TextComponent = styled.text``;

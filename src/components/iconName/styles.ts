@@ -6,7 +6,6 @@ interface IColor {
 export const Container = styled.div`
   width: 100%;
   height: 10%;
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,11 +16,13 @@ export const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: yellow;
 `;
 export const ImgComponent = styled.img`
   width: 100%;
   height: 100%;
-  background-color: purple;
 `;
-export const TextComponent = styled.text``;
+export const TextComponent = styled.text<IColor>`
+  text-transform: uppercase;
+  margin-left: 2vh;
+  color: ${(props) => (props.color ? props.color : "black")};
+`;

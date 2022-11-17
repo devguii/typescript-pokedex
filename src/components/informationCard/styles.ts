@@ -28,7 +28,8 @@ export const InformationContainer = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  border: 1vh solid black;
+  border: 0.5vh solid black;
+  background-color: white;
 `;
 
 export const ImgComponent = styled.img`
@@ -40,7 +41,7 @@ export const TextComponent = styled.text`
   text-transform: capitalize;
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 300%;
+  font-size: 4rem;
   color: black;
 `;
 
