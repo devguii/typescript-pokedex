@@ -17,7 +17,7 @@ export const ContainerDireita = styled.div`
 
 export const ImgContainer = styled.div`
   width: 43%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,15 +33,23 @@ export const InformationContainer = styled.div`
 `;
 
 export const ImgComponent = styled.img`
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
 `;
 
 export const TextComponent = styled.text`
   text-transform: capitalize;
   font-weight: bold;
   font-family: "Fira Sans";
-  font-size: 4rem;
+  font-size: 3.5rem;
+  color: black;
+`;
+
+export const JapaneseTextComponent = styled.text`
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: "Fira Sans";
+  font-size: 2rem;
   color: black;
 `;
 
