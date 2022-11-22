@@ -115,7 +115,7 @@ const InformationCard = () => {
           >
             <IconName></IconName>
             <Description data={pokemonDescription}></Description>
-            <Caracteristiques></Caracteristiques>
+            <Caracteristiques data={pokemon}></Caracteristiques>
             <Stats></Stats>
           </InformationContainer>
         </ContainerDireita>
