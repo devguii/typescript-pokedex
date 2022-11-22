@@ -8,14 +8,32 @@ export const Container = styled.div`
   height: 40%;
   background-color: blue;
 `;
-export const Detail = styled.div`
-  width: 10%;
-  height: 2vh;
-  background-color: greenyellow;
+
+export const OrganizeContainer = styled.div`
+  background-color: purple;
+`;
+
+export const StatusContainer = styled.div`
+  background-color: yellow;
+`;
+
+export const Detail = styled.div<IColor>`
+  width: 9%;
+  height: 1.2vh;
+  background-color: ${(props) => (props.color ? props.color : "black")};
+  margin-left: 1.8vw;
 `;
 
 export const H1Component = styled.h1`
   text-transform: uppercase;
+  font-family: "Fira Sans";
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-left: 2vw;
 `;
 
-export const TextComponent = styled.text``;
+export const StatusComponent = styled.text``;
+
+export const BarComponent = styled.text``;
+
+export const ValueComponent = styled.text``;
