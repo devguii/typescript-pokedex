@@ -11,10 +11,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
-export const Detail = styled.div`
+export const Detail = styled.div<IColor>`
   width: 17%;
   height: 1.2vh;
-  background-color: greenyellow;
+  background-color: ${(props) => (props.color ? props.color : "black")};
   margin-left: 1.8vw;
 `;
 

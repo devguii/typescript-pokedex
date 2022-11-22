@@ -16,6 +16,14 @@ export const OrganizeContainer = styled.div`
   justify-content: center;
 `;
 
+export const ImgContainer = styled.div`
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const DataContainer = styled.div`
   margin-top: 1vh;
   width: 30%;
@@ -26,10 +34,10 @@ export const DataContainer = styled.div`
   justify-content: center;
 `;
 
-export const Detail = styled.div`
+export const Detail = styled.div<IColor>`
   width: 26%;
   height: 1.2vh;
-  background-color: greenyellow;
+  background-color: ${(props) => (props.color ? props.color : "black")};
   margin-left: 1.8vw;
 `;
 
@@ -48,4 +56,8 @@ export const TextComponent = styled.text`
 
 export const DataComponent = styled.text`
   font-size: 2.5rem;
+`;
+
+export const Img = styled.img`
+  transform: scale(0.8);
 `;
