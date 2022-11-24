@@ -6,16 +6,9 @@ interface IColor {
 export const Container = styled.div`
   width: 100%;
   height: 40%;
-  background-color: blue;
 `;
 
-export const OrganizeContainer = styled.div`
-  background-color: purple;
-`;
-
-export const StatusContainer = styled.div`
-  background-color: yellow;
-`;
+export const OrganizeContainer = styled.div``;
 
 export const Detail = styled.div<IColor>`
   width: 9%;
@@ -31,9 +24,3 @@ export const H1Component = styled.h1`
   font-size: 1.3rem;
   margin-left: 2vw;
 `;
-
-export const StatusComponent = styled.text``;
-
-export const BarComponent = styled.text``;
-
-export const ValueComponent = styled.text``;

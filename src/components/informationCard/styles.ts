@@ -11,7 +11,7 @@ export const ContainerPai = styled.div``;
 
 export const ContainerDireita = styled.div`
   width: 57%;
-  height: 90vh;
+  height: 95vh;
   padding: 30px;
 `;
 
