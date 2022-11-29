@@ -1,40 +1,40 @@
 export default function typesToColorBar(type: string | undefined) {
   switch (type) {
     case "normal":
-      return "#yellow";
+      return "gray";
     case "fighting":
-      return "#bf3028";
+      return "red";
     case "flying":
-      return "#a790f0";
+      return "purple";
     case "poison":
-      return "#a140a1";
+      return "purple";
     case "ground":
-      return "#e1c068";
+      return "yellow";
     case "rock":
-      return "#b8a138";
+      return "yellow";
     case "bug":
-      return "#a8b92e";
+      return "yellow";
     case "ghost":
-      return "#705896";
+      return "purple";
     case "steel":
-      return "#b8b7d0";
+      return "gray";
     case "fire":
-      return "#ef8130";
+      return "red";
     case "water":
-      return "#6891f1";
+      return "blue";
     case "grass":
-      return "#78c94f";
+      return "green";
     case "electric":
-      return "#f8d139";
+      return "yellow";
     case "psychic":
-      return "#ee5688";
+      return "pink";
     case "ice":
-      return "#99d7d8";
+      return "blue";
     case "dragon":
       return "purple";
     case "dark":
-      return "#6f5647";
+      return "black";
     case "fairy":
-      return "#ee99ac";
+      return "pink";
   }
 }
